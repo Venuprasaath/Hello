@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieWave Productions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>MovieWave Productions</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search movies...">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="card-section">
+        <div class="card" id="about">
+            <h3>About Us</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="card" id="contact">
+            <h3>Contact Us</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="card" id="login">
+            <h3>Login</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="card" id="signup">
+            <h3>Sign Up</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </section>
+
+    <!-- Posters Section -->
+    <section class="poster-section">
+        <div class="poster-wrapper">
+            <img src="Aranmanai.jpg" alt="Poster 1">
+            <img src="Amaran_2024_poster.jpg" alt="Poster 2">
+            <img src="Thalaivaa_poster.jpg" alt="Poster 3">
+            <img src="ajith_mankatha_movie_release_posters_01.jpg" alt="Poster 4">
+            <!-- Duplicate the first poster for seamless looping -->
+            <img src="Leo_(2023_Indian_film).jpg" alt="Poster 1 Duplicate">
+            <img src="The_Greatest_of_All_Time.jpg" alt="Poster 1 Duplicate">
+            <img src="Mazhai_Pidikkatha_Manithan.jpg" alt="Poster 1 Duplicate">
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        // JavaScript for automatic scroll on poster section
+        const posterWrapper = document.querySelector('.poster-wrapper');
+        const posters = document.querySelectorAll('.poster-wrapper img');
+        const posterCount = posters.length;
+        const posterWidth = posters[0].clientWidth; // Width of each poster
+        let scrollPosition = 0;
+
+        function autoScrollPosters() {
+            scrollPosition += posterWidth;
+
+            // Reset to the first poster if scrolled past the last
+            if (scrollPosition >= (posterCount - 1) * posterWidth) {
+                scrollPosition = 0; // Reset to the start
+            }
+
+            // Apply the transform for scrolling effect
+            posterWrapper.style.transform = `translateX(-${scrollPosition}px)`;
+        }
+
+        // Set interval for scrolling
+        setInterval(autoScrollPosters, 2000); // Change posters every 2 seconds
+    </script>
+</body>
+</html>

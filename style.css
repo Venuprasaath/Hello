@@ -1,0 +1,138 @@
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+header {
+    width: 100%;
+    padding: 20px;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8em;
+    color: orangered;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+}
+
+.search-bar button {
+    padding: 6px 10px;
+    margin-left: 10px;
+    border: none;
+    background-color: orangered;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #f39c12;
+}
+
+/* Card Section */
+.card-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px;
+    gap: 20px;
+}
+
+.card {
+    width: 250px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.card h3 {
+    font-size: 1.4em;
+    color: orangered;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #bbb;
+}
+
+.card:hover p {
+    color: orangered;
+}
+
+/* Poster Section */
+.poster-section {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    background-color: #222;
+}
+
+.poster-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.poster-wrapper img {
+    width: 200px; /* Adjust the size as needed */
+    height: auto;
+    margin-right: 20px; /* Gap between posters */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

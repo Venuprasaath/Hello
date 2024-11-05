@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MovieWave Productions</title>
+    <link rel="stylesheet" href="signup.css">
+    <script>
+        // JavaScript function to handle form submission
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent default form submission
+            window.location.href = 'index.html'; // Redirect to home page
+        }
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <!-- Typewriting Effect Title -->
+        <h2 class="typewriter">Welcome to MovieWave</h2>
+        <form action="login_process.php" method="post" onsubmit="handleLogin(event)">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Login</button>
+            
+            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </form>
+    </div>
+</body>
+</html>
